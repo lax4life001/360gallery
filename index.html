@@ -15,13 +15,13 @@
   <body>
     <a-scene>
       <a-assets>
-        <img id="kieran" src="img/1.jpg">
+        <img id="kieran" src="img/TestPano.jpg">
         <img id="kieran-thumb" crossorigin="anonymous" src="img/kieran-thumb.png">
         <img id="christian-thumb" crossorigin="anonymous" src="img/christian-thumb.png">
         <img id="eddie-thumb" crossorigin="anonymous" src="img/eddie-thumb.png">
         <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-        <img id="christian" crossorigin="anonymous" src="img/2.jpg">
-        <img id="eddie" crossorigin="anonymous" src="img/4.jpg">
+        <img id="christian" crossorigin="anonymous" src="img/TestPano2.jpg">
+        <img id="eddie" crossorigin="anonymous" src="img/TestPano3.jpg">
 
         <!-- Image link template to be reused. -->
         <script id="link" type="text/nunjucks">
@@ -37,11 +37,11 @@
         </script>
       </a-assets>
 
-      <!-- 360-degree image. -->
-      <a-sky id="image-360" radius="10" src="#kieran"></a-sky>
+      <!-- 360-degree image. Default Radius: 10 -->
+      <a-sky id="image-360" radius="8" src="#kieran"></a-sky>
 
       <!-- Image links. -->
-      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
+      <a-entity id="links" layout="type: line; margin: 3" position="0 -1 -4">
         <a-entity template="src: #link" data-src="#christian" data-thumb="#christian-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#kieran" data-thumb="#kieran-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#eddie" data-thumb="#eddie-thumb"></a-entity>
