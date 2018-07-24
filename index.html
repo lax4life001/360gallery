@@ -25,6 +25,7 @@
         <img id="img4" src="img/TestPano4.jpg">
         <img id="img5" src="img/TestPano5.jpg">
         <img id="img6" src="img/TestPano6.jpg">
+        <img id="arrow-thumb" src="img/arrow.png" >
 
         <!-- Image link template to be reused. -->
         <script id="link" type="text/nunjucks">
@@ -39,17 +40,21 @@
             update-raycaster="#cursor"></a-plane>
         </script>
       </a-assets>
-
+      <!--Next and previous image definers -->
+       <script id="imga" type="text/nunjucks">
+        </script>
+       <script id="imgb" type="text/nunjucks">
+        </script>
       <!-- 360-degree image. Default Radius: 10 -->
       <a-sky id="image-360" radius="10" src="#img1"></a-sky>
 
       <!-- Image links. -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="0 -5 -4">
-        <a-entity template="src: #link" data-src="#img1" data-thumb="#christian-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#img1" data-thumb="#arrow-thumb"></a-entity>
       </a-entity>
       
-      <a-entity id="links2" layout="type: line; margin: 1.5" position="0 0 -4">
-        <a-entity template="src: #link" data-src="#img2" data-thumb="#eddie-thumb"></a-entity>
+      <a-entity id="links2" layout="type: line; margin: 1.5" position="0 0 4">
+        <a-entity template="src: #link" data-src="#img2" data-thumb="#arrow-thumb"></a-entity>
       </a-entity>
 
       <!-- Camera + cursor. -->
